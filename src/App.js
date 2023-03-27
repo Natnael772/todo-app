@@ -3,7 +3,8 @@ import logo from "./logo.svg";
 
 import "./App.css";
 import AddTodoForm from "./components/AddTodoForm";
-import TodoItem from "./components/TodoItem";
+
+import TodoList from "./components/TodoList";
 
 import store from "./app/store";
 
@@ -11,7 +12,7 @@ const App = () => {
   return (
     <>
       <AddTodoForm />
-      <TodoItem />
+      <TodoList />
     </>
   );
 };
