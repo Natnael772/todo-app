@@ -4,11 +4,8 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import store from "./app/store";
-import TodoList from "./features/todos/TodoList";
 
-const App = () => {
-  return <TodoList />;
-};
+const App = () => {};
 
 // function App() {
 //   console.log("Initial state", store.getState());
