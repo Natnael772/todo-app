@@ -2,10 +2,13 @@ import React from "react";
 import logo from "./logo.svg";
 
 import "./App.css";
+import AddTodoForm from "./components/AddTodoForm";
 
 import store from "./app/store";
 
-const App = () => {};
+const App = () => {
+  return <AddTodoForm />;
+};
 
 // function App() {
 //   console.log("Initial state", store.getState());
