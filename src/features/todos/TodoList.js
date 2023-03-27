@@ -18,7 +18,7 @@ const TodoList = () => {
     isSuccess,
     isError,
     error,
-  } = useGetTodosQuery;
+  } = useGetTodosQuery();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,10 +45,20 @@ const TodoList = () => {
     </form>
   );
 
+  //Conditional content
+  let content;
+  if (isLoading) {
+    content = <p>Loading...</p>;
+  } else if (isSuccess) {
+    content = JSON.stringify(todos);
+  } else if (isError) {
+    content = <p>{error}</p>;
+  }
   return (
     <main>
       <h1>Todo List</h1>
       {newItemSection}
+      {content}
     </main>
   );
 };
