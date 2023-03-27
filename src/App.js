@@ -3,11 +3,17 @@ import logo from "./logo.svg";
 
 import "./App.css";
 import AddTodoForm from "./components/AddTodoForm";
+import TodoItem from "./components/TodoItem";
 
 import store from "./app/store";
 
 const App = () => {
-  return <AddTodoForm />;
+  return (
+    <>
+      <AddTodoForm />
+      <TodoItem />
+    </>
+  );
 };
 
 // function App() {
