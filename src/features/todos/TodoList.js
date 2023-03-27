@@ -28,11 +28,11 @@ const TodoList = () => {
     e.preventDefault();
 
     //Add the task
-    // addTodo({
-    //   userId: 1,
-    //   title: newTodo,
-    //   completed: false,
-    // });
+    addTodo({
+      userId: 1,
+      title: newTodo,
+      completed: false,
+    });
     setNewTodo("");
   };
 
