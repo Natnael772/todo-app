@@ -1,4 +1,5 @@
 import { toggleComplete } from "../app/todoSlice";
+import { deleteTodo } from "../app/todoSlice";
 import { useDispatch } from "react-redux";
 
 const TodoItem = ({ id, title, completed }) => {
@@ -10,6 +11,9 @@ const TodoItem = ({ id, title, completed }) => {
         completed: !completed,
       })
     );
+  };
+  const handleDeleteTodo = () => {
+    dispatch(deleteTodo({ id: id }));
   };
   return (
     <li className={`list-group-item ${completed && "list-group-item-success"}`}>
@@ -23,7 +27,9 @@ const TodoItem = ({ id, title, completed }) => {
           />
           {title}
         </span>
-        <button className="btn btn-danger">Delete</button>
+        <button className="btn btn-danger" onClick={handleDeleteTodo}>
+          Delete
+        </button>
       </div>
     </li>
   );

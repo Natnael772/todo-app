@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 const TodoList = () => {
   //extract data from the store
+  //below state is my entire redux store
   const todos = useSelector((state) => state.todos);
   //   const todos = [
   //     { id: 1, title: "todo1", completed: false },
