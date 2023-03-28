@@ -12,6 +12,7 @@ import store from "./app/store";
 const App = () => {
   return (
     <>
+      <h1>My todo List</h1>
       <AddTodoForm />
       <TodoList />
       <TotalCompleteItems />
