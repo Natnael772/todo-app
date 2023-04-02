@@ -43,7 +43,7 @@ let todos = [
   },
 ];
 
-const PORT = 7000;
+const PORT = dotenv.PORT || 7000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
