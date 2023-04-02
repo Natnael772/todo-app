@@ -110,7 +110,7 @@ const todoSlice = createSlice({
     },
     [deleteTodoAsync.fulfilled]: (state, action) => {
       const index = state.findIndex((todo) => todo.id == action.payload.id);
-      // todos.splice(index, 1);
+
       state.splice(index, 1);
     },
   },
