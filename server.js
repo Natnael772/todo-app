@@ -44,6 +44,19 @@ let todos = [
 ];
 
 app.get("/todos", (req, res) => res.send(todos));
+
+app.post("/todos", (req, res) => {
+  const todo = {
+    title: req.body.title,
+    id: Math.random().toString(),
+    completed: false,
+  };
+  console.log(todo);
+  todos.push(todo);
+
+  return res.send(todos);
+});
+
 const PORT = 7000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
